@@ -1,8 +1,10 @@
-# 2021 Census cartographic boundary files for Economic Regions : https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm?year=21
-# Mapshaper tool: https://mapshaper.org/
+# For custom Economic Region geographies aligning to the labour market metrics in the LM imbalances dashboard, follow these instructions.
+# 1) Retrieve 2021 Census cartographic boundary files (CBF) for Economic Regions: https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm?year=21
+# 2) Upload CBF and merge_names.csv in Mapshaper Mapshaper (https://mapshaper.org/) and run the following code in console:
 
 -each target=merge_names 'ERUID = String(ERUID)'
 -join merge_names keys=ERUID,ERUID
 
 -dissolve Merge
+
 
