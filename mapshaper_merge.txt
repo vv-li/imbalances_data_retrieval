@@ -1,3 +1,6 @@
+# 2021 Census cartographic boundary files for Economic Regions : https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm?year=21
+
 -each target=merge_names 'ERUID = String(ERUID)'
 -join merge_names keys=ERUID,ERUID
+
 -dissolve Merge
